@@ -1,0 +1,51 @@
+{
+  "title": "Employee Onboarding",
+  "description": "Collect new employee details",
+  "fields": [
+    {
+      "name": "firstName",
+      "type": "text",
+      "label": "First Name",
+      "placeholder": "Enter first name",
+      "required": true,
+      "validations": { "minLength": 2, "maxLength": 50 }
+    },
+    {
+      "name": "age",
+      "type": "number",
+      "label": "Age",
+      "placeholder": "Enter age",
+      "required": true,
+      "validations": { "min": 18, "max": 70 }
+    },
+    {
+      "name": "department",
+      "type": "select",
+      "label": "Department",
+      "placeholder": "Choose department",
+      "required": true,
+      "options": ["Engineering", "Product", "Design", "HR", "Sales"]
+    },
+    {
+      "name": "startDate",
+      "type": "date",
+      "label": "Start Date",
+      "required": true,
+      "validations": { "minDate": "2000-01-01" }
+    },
+    {
+      "name": "bio",
+      "type": "textarea",
+      "label": "Short Bio",
+      "placeholder": "Write a short bio",
+      "required": false,
+      "validations": { "maxLength": 500 }
+    },
+    {
+      "name": "receiveNewsletter",
+      "type": "switch",
+      "label": "Receive Newsletter",
+      "required": false
+    }
+  ]
+}

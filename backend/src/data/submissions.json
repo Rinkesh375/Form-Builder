@@ -1,0 +1,255 @@
+[
+  {
+    "id": "2b7f0907-8c0d-4c49-a8e0-7495da37b996",
+    "createdAt": "2025-11-29T07:18:01.102Z",
+    "firstName": "Aarav",
+    "age": 28,
+    "department": "Engineering",
+    "startDate": "2029-03-10",
+    "bio": "Full-stack developer.",
+    "receiveNewsletter": true
+  },
+  {
+    "id": "8c1e5e74-3a3f-4e51-9a06-8a2c77463b12",
+    "createdAt": "2025-11-29T07:18:02.145Z",
+    "firstName": "Priya",
+    "age": 30,
+    "department": "Finance",
+    "startDate": "2028-07-21",
+    "bio": "Finance expert.",
+    "receiveNewsletter": false
+  },
+  {
+    "id": "b233c96a-0bb1-4fb5-bc95-4c20c2ddf682",
+    "createdAt": "2025-11-29T07:18:03.210Z",
+    "firstName": "Karan",
+    "age": 27,
+    "department": "Engineering",
+    "startDate": "2029-11-05",
+    "bio": "Cloud engineer.",
+    "receiveNewsletter": true
+  },
+  {
+    "id": "c6a36a02-8f9f-4151-89ad-a05c57c5d3de",
+    "createdAt": "2025-11-29T07:18:04.511Z",
+    "firstName": "Meera",
+    "age": 24,
+    "department": "HR",
+    "startDate": "2028-12-15",
+    "bio": "HR associate.",
+    "receiveNewsletter": false
+  },
+  {
+    "id": "af54463d-7ad4-4a12-a6df-8e70fd19c995",
+    "createdAt": "2025-11-29T07:18:05.555Z",
+    "firstName": "Sahil",
+    "age": 32,
+    "department": "Design",
+    "startDate": "2030-04-01",
+    "bio": "UI/UX designer.",
+    "receiveNewsletter": true
+  },
+  {
+    "id": "e89b8735-52ae-4bb1-a1cb-cfe27e5fb30a",
+    "createdAt": "2025-11-29T07:18:06.600Z",
+    "firstName": "Isha",
+    "age": 29,
+    "department": "Marketing",
+    "startDate": "2029-09-19",
+    "bio": "Digital marketer.",
+    "receiveNewsletter": false
+  },
+  {
+    "id": "56b6636d-22f8-41b8-97dd-6f8e31b50c73",
+    "createdAt": "2025-11-29T07:18:07.700Z",
+    "firstName": "Rohit",
+    "age": 34,
+    "department": "Engineering",
+    "startDate": "2031-02-14",
+    "bio": "Backend engineer.",
+    "receiveNewsletter": true
+  },
+  {
+    "id": "d75b3228-3b7e-4e3c-9e82-8fa41179a16c",
+    "createdAt": "2025-11-29T07:18:08.821Z",
+    "firstName": "Neha",
+    "age": 26,
+    "department": "Support",
+    "startDate": "2028-05-18",
+    "bio": "Customer support.",
+    "receiveNewsletter": false
+  },
+  {
+    "id": "d9a52b98-fb6b-4cfe-a381-60ec0b039a0f",
+    "createdAt": "2025-11-29T07:18:09.900Z",
+    "firstName": "Jay",
+    "age": 31,
+    "department": "Engineering",
+    "startDate": "2030-06-28",
+    "bio": "Systems engineer.",
+    "receiveNewsletter": true
+  },
+  {
+    "id": "010dd4a9-1af2-4fa1-af1d-8225b547e5fc",
+    "createdAt": "2025-11-29T07:18:10.432Z",
+    "firstName": "Anjali",
+    "age": 23,
+    "department": "Design",
+    "startDate": "2029-01-02",
+    "bio": "Graphic designer.",
+    "receiveNewsletter": true
+  },
+  {
+    "id": "bf690755-0265-4c4c-92f3-a24df951aa53",
+    "createdAt": "2025-11-29T07:18:11.901Z",
+    "firstName": "Dev",
+    "age": 33,
+    "department": "IT",
+    "startDate": "2027-11-24",
+    "bio": "IT admin.",
+    "receiveNewsletter": false
+  },
+  {
+    "id": "2ce949ea-9b14-4771-b922-8d2b8d5a86e4",
+    "createdAt": "2025-11-29T07:18:12.500Z",
+    "firstName": "Sneha",
+    "age": 27,
+    "department": "Marketing",
+    "startDate": "2031-03-19",
+    "bio": "Brand specialist.",
+    "receiveNewsletter": true
+  },
+  {
+    "id": "7121ed93-e73f-4c3c-b3ad-8427a8e7b5f0",
+    "createdAt": "2025-11-29T07:18:13.700Z",
+    "firstName": "Mohan",
+    "age": 35,
+    "department": "Finance",
+    "startDate": "2028-08-01",
+    "bio": "Senior auditor.",
+    "receiveNewsletter": false
+  },
+  {
+    "id": "85f52d5d-62d6-4b32-8f2b-dc81b963b92a",
+    "createdAt": "2025-11-29T07:18:14.300Z",
+    "firstName": "Vidhi",
+    "age": 24,
+    "department": "HR",
+    "startDate": "2030-10-10",
+    "bio": "HR trainee.",
+    "receiveNewsletter": true
+  },
+  {
+    "id": "cbf89c7a-3b1d-4e01-a0ad-33b0cb8711f0",
+    "createdAt": "2025-11-29T07:18:15.010Z",
+    "firstName": "Aditya",
+    "age": 29,
+    "department": "Engineering",
+    "startDate": "2029-05-12",
+    "bio": "Microservices architect.",
+    "receiveNewsletter": false
+  },
+  {
+    "id": "0e801bfa-f412-47ad-b5f5-476dc1eac519",
+    "createdAt": "2025-11-29T07:18:16.200Z",
+    "firstName": "Tina",
+    "age": 26,
+    "department": "Support",
+    "startDate": "2027-10-03",
+    "bio": "Support specialist.",
+    "receiveNewsletter": false
+  },
+  {
+    "id": "1a504c0e-0c96-4aaa-8f44-69273221d79c",
+    "createdAt": "2025-11-29T07:18:17.850Z",
+    "firstName": "Harsh",
+    "age": 30,
+    "department": "Engineering",
+    "startDate": "2031-01-20",
+    "bio": "DevOps engineer.",
+    "receiveNewsletter": true
+  },
+  {
+    "id": "6cfe78f2-64d6-49f5-bf0e-1e8e69ea40c4",
+    "createdAt": "2025-11-29T07:18:18.511Z",
+    "firstName": "Pooja",
+    "age": 22,
+    "department": "Design",
+    "startDate": "2028-04-09",
+    "bio": "Junior designer.",
+    "receiveNewsletter": false
+  },
+  {
+    "id": "a2f6d8f1-245b-4019-ad94-c64a4a1ff702",
+    "createdAt": "2025-11-29T07:18:19.730Z",
+    "firstName": "Sameer",
+    "age": 34,
+    "department": "Marketing",
+    "startDate": "2029-04-07",
+    "bio": "Analytics manager.",
+    "receiveNewsletter": true
+  },
+  {
+    "id": "f3024b5a-31ef-4274-8944-3a69fdc2f3c1",
+    "createdAt": "2025-11-29T07:18:20.900Z",
+    "firstName": "Naina",
+    "age": 28,
+    "department": "Product",
+    "startDate": "2030-02-19T00:00:00.000Z",
+    "bio": "Finance planner.",
+    "receiveNewsletter": true,
+    "updatedAt": "2025-11-29T15:50:17.867Z"
+  },
+  {
+    "id": "98b1c0a9-c87f-4ab8-9b43-4ff5e31afc0c",
+    "createdAt": "2025-11-29T07:18:22.130Z",
+    "firstName": "Vikram",
+    "age": 31,
+    "department": "IT",
+    "startDate": "2029-12-22",
+    "bio": "Cybersecurity specialist.",
+    "receiveNewsletter": true
+  },
+  {
+    "id": "db238e32-6ebe-4d49-9bb8-71caa836c111",
+    "createdAt": "2025-11-29T07:18:23.500Z",
+    "firstName": "Aisha",
+    "age": 25,
+    "department": "HR",
+    "startDate": "2027-06-16",
+    "bio": "HR executive.",
+    "receiveNewsletter": false
+  },
+  {
+    "id": "ca590d91-4c91-4cbc-8bb4-09a8eaf6c0ea",
+    "createdAt": "2025-11-29T07:18:24.900Z",
+    "firstName": "Rehan",
+    "age": 33,
+    "department": "Engineering",
+    "startDate": "2031-09-01T00:00:00.000Z",
+    "bio": "Embedded engineer.",
+    "receiveNewsletter": true,
+    "updatedAt": "2025-11-29T15:54:27.750Z"
+  },
+  {
+    "id": "7472e51b-95d7-48aa-bc95-23e76fa2de90",
+    "createdAt": "2025-11-29T07:18:25.730Z",
+    "firstName": "Divy",
+    "age": 20,
+    "department": "Design",
+    "startDate": "2028-02-14T00:00:00.000Z",
+    "bio": "Public relations specialist.",
+    "receiveNewsletter": false,
+    "updatedAt": "2025-11-29T16:28:32.050Z"
+  },
+  {
+    "id": "59d50720-c20f-4009-8087-d0449eef35e7",
+    "createdAt": "2025-11-29T17:05:10.015Z",
+    "firstName": "Rinkesh",
+    "age": 18,
+    "department": "Engineering",
+    "startDate": "2000-01-01T00:00:00.000Z",
+    "bio": "",
+    "receiveNewsletter": false
+  }
+]
