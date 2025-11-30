@@ -1,3 +1,4 @@
+"use server";
 import { FormSchema } from "@/types/schema-type";
 import { SubmissionsResponse, Submission, SortOrder } from "../types/types";
 
