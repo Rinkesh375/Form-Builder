@@ -426,7 +426,15 @@ DELETE /api/submissions/:id
 
 ## 🐛 Known Issues
 
-*No known issues at this time.*
+## 🔮 Future Enhancements
+
+- [ ] Debouncing for search functionality
+- [ ] Multi-step forms
+- [ ] Form analytics and reporting
+- [ ] File upload support
+- [ ] Dynamic skill selection based on selected department (e.g., Engineering → Development, AI/ML, App Development)
+- [ ] URL state synchronization for table filters
+      
 
 ---
 
@@ -440,23 +448,6 @@ DELETE /api/submissions/:id
 
 ---
 
-## 🧪 Testing
-
-### Running Tests
-
-**Backend:**
-```bash
-cd backend
-npm test
-```
-
-**Frontend:**
-```bash
-cd frontend
-npm test
-```
-
----
 
 ## 🚀 Bonus Features Implemented
 
@@ -469,18 +460,8 @@ npm test
 
 ---
 
-## 🔮 Future Enhancements
 
-- [ ] Debouncing for search functionality
-- [ ] Multi-step forms
-- [ ] Form analytics and reporting
-- [ ] File upload support
-- [ ] Dynamic skill selection based on selected department (e.g., Engineering → Development, AI/ML, App Development)
-- [ ] URL state synchronization for table filters
 
----
-
-## 👨‍💻 Development
 
 ### Code Quality
 - ESLint configured for code linting
