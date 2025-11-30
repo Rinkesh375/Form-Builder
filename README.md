@@ -21,8 +21,11 @@ A full-stack dynamic form builder application for Employee Onboarding with real-
 *Modal/drawer showing detailed view of a selected submission*
 
 ### 5. Loading State
-![Loading State](https://github.com/Rinkesh375/Form-Builder/blob/main/Screenshot%202025-11-30%20190937.png?raw=true)
+
+<img src="https://github.com/Rinkesh375/Form-Builder/blob/main/Screenshot%202025-11-30%20190937.png?raw=true" width="100%" />
+
 *Loading indicators during data fetching*
+
 
 ### 6. Error State
 ![Error State](https://github.com/Rinkesh375/Form-Builder/blob/main/Screenshot%202025-11-30%20190851.png?raw=true)
@@ -155,8 +158,9 @@ The frontend application will run on `http://localhost:3000`.
 
 ## 🌐 Live Deployment
 
-- **Frontend**: [https://task-management-eta-three.vercel.app]
-- **Backend**: [https://form-builder-9fnn.onrender.com]
+- **Frontend**: <a href="https://task-management-eta-three.vercel.app" target="_blank">https://task-management-eta-three.vercel.app</a>
+- **Backend**: <a href="https://form-builder-9fnn.onrender.com" target="_blank">https://form-builder-9fnn.onrender.com</a>
+
 
 ---
 
@@ -486,6 +490,7 @@ npm test
 
 ## 📧 Contact
 
-**Resume**: [View Resume](https://drive.google.com/file/d/1ov5L11cxM2SkcXlStwXTVEC1sWlATVY9/view?usp=sharing)
+**Resume**: <a href="https://drive.google.com/file/d/1ov5L11cxM2SkcXlStwXTVEC1sWlATVY9/view?usp=sharing" target="_blank">View Resume</a>
+
 
 ---
