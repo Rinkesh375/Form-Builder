@@ -1,6 +1,10 @@
-# MatBook Assignment - Dynamic Form Builder System
+# Dynamic Form Builder System
 
 A full-stack dynamic form builder application for Employee Onboarding with real-time validation, server-side pagination, and sorting capabilities.
+
+## 📧 Contact
+
+**Resume**: <a href="https://drive.google.com/file/d/1ov5L11cxM2SkcXlStwXTVEC1sWlATVY9/view?usp=sharing" target="_blank">View Resume</a>
 
 ## 📸 Screenshots
 
@@ -485,10 +489,4 @@ npm test
 - Component documentation with JSDoc
 
 
-
-
-
-## 📧 Contact
-
-**Resume**: <a href="https://drive.google.com/file/d/1ov5L11cxM2SkcXlStwXTVEC1sWlATVY9/view?usp=sharing" target="_blank">View Resume</a>
 
