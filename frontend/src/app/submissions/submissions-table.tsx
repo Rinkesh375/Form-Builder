@@ -106,7 +106,7 @@ export default function SubmissionsTableClient() {
   };
 
   return (
-    <div className="space-y-4 h-[80vh] overflow-y-scroll">
+    <div className="space-y-4 h-[85vh] overflow-y-auto">
       <TableFilters />
 
       <DataTable
