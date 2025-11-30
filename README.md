@@ -158,8 +158,8 @@ The frontend application will run on `http://localhost:3000`.
 
 ## 🌐 Live Deployment
 
-- **Frontend**: <a href="https://task-management-eta-three.vercel.app" target="_blank">https://task-management-eta-three.vercel.app</a>
-- **Backend**: <a href="https://form-builder-9fnn.onrender.com" target="_blank">https://form-builder-9fnn.onrender.com</a>
+- **Frontend**: <a href="https://task-management-eta-three.vercel.app" target="_blank">Frontend</a>
+- **Backend**: <a href="https://form-builder-9fnn.onrender.com" target="_blank">Backend</a>
 
 
 ---
@@ -485,12 +485,10 @@ npm test
 - Component documentation with JSDoc
 
 
-```
+
 
 
 ## 📧 Contact
 
 **Resume**: <a href="https://drive.google.com/file/d/1ov5L11cxM2SkcXlStwXTVEC1sWlATVY9/view?usp=sharing" target="_blank">View Resume</a>
 
-
----
