@@ -455,7 +455,7 @@ npm test
 - [x] CSV export functionality
 - [x] Edit and delete submissions
 - [x] Advanced search and filtering
-- [ ] Dark mode support
+- [x] Dark mode support
 - [ ] Form builder UI for creating custom forms
 - [x] Real-time validation
 
