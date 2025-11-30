@@ -1,4 +1,4 @@
-import { Submission } from "@/lib/types";
+import { Submission } from "@/types/types";
 
 export interface SubmissionDialogProps {
   submission: Submission | null;

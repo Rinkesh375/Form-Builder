@@ -7,6 +7,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import ErrorState from "@/custom-components/Error-state";
+import LoadingState from "@/custom-components/Loading-state";
 import { DataTableProps } from "@/types/data-table-type";
 import { flexRender } from "@tanstack/react-table";
 
@@ -17,14 +19,21 @@ export default function DataTable({
   error,
   totalItems,
 }: DataTableProps) {
-  if (isLoading) return <div>Loading…</div>;
-
-  if (isError)
+  if (isLoading) {
     return (
-      <div className="text-red-500">
-        Error: {String((error as any)?.message)}
-      </div>
+      <LoadingState
+        title="Loading Table Submission data"
+        description="This may take a few seconds"
+      />
     );
+  } else if (isError) {
+    <ErrorState
+      title="Error while fetching submission data"
+      description={
+        error?.message ?? "Something went wrong. Please try again later."
+      }
+    />;
+  }
 
   return (
     <div className="rounded-md border">

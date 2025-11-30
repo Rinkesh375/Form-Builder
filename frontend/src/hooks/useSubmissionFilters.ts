@@ -4,7 +4,7 @@ import {
   useQueryStates,
   parseAsStringEnum,
 } from "nuqs";
-import { SortOrder } from "@/lib/types";
+import { SortOrder } from "@/types/types";
 
 export default function useSubmissionFilters() {
   return useQueryStates({

@@ -1,6 +1,6 @@
 {
   "title": "Employee Onboarding",
-  "description": "Collect new employee details",
+  "nameSchema": "employees",
   "fields": [
     {
       "name": "firstName",

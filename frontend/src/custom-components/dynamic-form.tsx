@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { createSubmission, updateSubmission } from "@/lib/api";
-import { DepartmentEnum, Submission } from "@/lib/types";
+import { DepartmentEnum, Submission } from "@/types/types";
 import {
   Form,
   FormField,
@@ -72,7 +72,7 @@ export default function DynamicSubmissionForm({
       toast.success("Submission updated");
       router.push("/submissions");
     },
-    onError: (err: any) => toast.error(err?.message),
+    onError: (err) => toast.error(err?.message),
   });
 
   const isEdit = !!initialValues?.id;

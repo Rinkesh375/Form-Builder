@@ -1,37 +1,3 @@
-export type FieldType =
-  | "text"
-  | "number"
-  | "select"
-  | "multi-select"
-  | "date"
-  | "textarea"
-  | "switch";
-
-export type FormField = {
-  name: string;
-  type: FieldType;
-  label: string;
-  placeholder?: string;
-  required?: boolean;
-  options?: string[];
-  validations?: {
-    minLength?: number;
-    maxLength?: number;
-    regex?: string;
-    min?: number;
-    max?: number;
-    minDate?: string;
-    minSelected?: number;
-    maxSelected?: number;
-  };
-};
-
-export type FormSchema = {
-  title: string;
-  description: string;
-  fields: FormField[];
-};
-
 export type Submission = {
   id?: string;
   firstName: string;

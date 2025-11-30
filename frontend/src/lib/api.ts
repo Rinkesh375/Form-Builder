@@ -1,4 +1,5 @@
-import { FormSchema, SubmissionsResponse, Submission } from "./types";
+import { FormSchema } from "@/types/schema-type";
+import { SubmissionsResponse, Submission, SortOrder } from "../types/types";
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
@@ -25,7 +26,7 @@ export type ListSubmissionsParams = {
   page: number;
   limit: number;
   sortBy: string;
-  sortOrder: "asc" | "desc";
+  sortOrder: SortOrder;
   search?: string;
   department?: string;
 };
@@ -87,4 +88,17 @@ export async function fetchSubmissionById(
     cache: "no-store",
   });
   return handleResponse(res);
+}
+
+export async function getSubmissionsCSV(): Promise<string> {
+  const res = await fetch(`${BASE_URL}/api/submissions/csv`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to download CSV");
+  }
+
+  const csvText = await res.text();
+  return csvText;
 }

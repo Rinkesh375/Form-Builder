@@ -1,4 +1,4 @@
-import { SortOrder } from "@/lib/types";
+import { SortOrder } from "@/types/types";
 import {
   createLoader,
   parseAsInteger,

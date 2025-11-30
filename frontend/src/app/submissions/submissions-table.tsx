@@ -11,12 +11,14 @@ import {
 
 import { fetchSubmissions, deleteSubmission } from "@/lib/api";
 import { queryKeys } from "@/lib/query-keys";
-import { type Submission } from "@/lib/types";
+import { type Submission } from "@/types/types";
 import useSubmissionFilters from "@/hooks/useSubmissionFilters";
-import SubmissionDetailsDialog from "./submission-component/submission-details-dialog";
-import TableFilters from "./submission-component/table-filters";
-import DataTable from "./submission-component/data-table";
-import TablePagination from "./submission-component/table-pagination";
+import SubmissionDetailsDialog from "../../custom-components/submission-component/submission-details-dialog";
+import TableFilters, {
+  TableActions,
+} from "../../custom-components/submission-component/table-filters";
+import DataTable from "../../custom-components/submission-component/data-table";
+import TablePagination from "../../custom-components/submission-component/table-pagination";
 import { formatDateTime } from "@/constants/constants";
 import useconfirm from "@/hooks/useConfirm";
 import { useRouter } from "next/navigation";
@@ -24,18 +26,18 @@ import { useRouter } from "next/navigation";
 export default function SubmissionsTableClient() {
   const queryClient = useQueryClient();
   const [filters, setFilters] = useSubmissionFilters();
+  const { data, isLoading, isError, error } = useQuery({
+    queryKey: queryKeys.submissions(filters),
+    queryFn: () => fetchSubmissions(filters),
+    placeholderData: (prev) => prev,
+  });
+
   const [selected, setSelected] = useState<Submission | null>(null);
   const [RemoveConfirmation, confirmRemove] = useconfirm(
     "Are you sure?",
     `The following action will remove selected form submission`
   );
   const router = useRouter();
-
-  const { data, isLoading, isError, error } = useQuery({
-    queryKey: queryKeys.submissions(filters),
-    queryFn: () => fetchSubmissions(filters),
-    placeholderData: (prev) => prev,
-  });
 
   const deleteMut = useMutation({
     mutationFn: deleteSubmission,
@@ -73,8 +75,7 @@ export default function SubmissionsTableClient() {
         id: "actions",
         header: "Actions",
         cell: ({ row }) => (
-          <TableFilters.Actions
-            submission={row.original}
+          <TableActions
             onView={() => setSelected(row.original)}
             onEdit={() => {
               router.push(`/submissions/${row.original.id}`);
@@ -120,6 +121,7 @@ export default function SubmissionsTableClient() {
         page={filters.page}
         totalPages={data?.totalPages ?? 1}
         onPageChange={(page: number) => setFilters({ page })}
+        totalItems={data?.totalItems ?? 0}
       />
 
       <SubmissionDetailsDialog

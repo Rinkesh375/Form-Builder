@@ -1,4 +1,4 @@
-import { DepartmentEnum } from "@/lib/types";
+import { DepartmentEnum } from "@/types/types";
 import { format } from "date-fns";
 
 export const formatDateTime = (value: Date) => {

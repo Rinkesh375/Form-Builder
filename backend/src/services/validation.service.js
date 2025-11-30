@@ -1,58 +1,51 @@
 export function validateSubmissionAgainstSchema(schema, payload) {
   const errors = {};
-
   if (!schema || !Array.isArray(schema.fields)) {
     return { isValid: true, errors: {} };
   }
 
   for (const field of schema.fields) {
-    const {
-      name,
-      type,
-      label,
-      required,
-      options,
-      validations = {}
-    } = field;
+    const { name, type, label, required, options, validations = {} } = field;
 
     const fieldLabel = label || name;
     const value = payload[name];
 
-    // Handle "required"
     if (required) {
       const isEmpty =
         value === undefined ||
         value === null ||
-        (typeof value === 'string' && value.trim() === '') ||
+        (typeof value === "string" && value.trim() === "") ||
         (Array.isArray(value) && value.length === 0);
 
       if (isEmpty) {
         errors[name] = `${fieldLabel} is required`;
-        continue; // skip other validations
+        continue;
       }
     }
 
-    // Skip further checks if value is not provided and not required
     if (
       value === undefined ||
       value === null ||
-      (typeof value === 'string' && value.trim() === '') ||
+      (typeof value === "string" && value.trim() === "") ||
       (Array.isArray(value) && value.length === 0)
     ) {
       continue;
     }
 
-    // Type-specific validation
     switch (type) {
-      case 'text':
-      case 'textarea': {
+      case "text":
+      case "textarea": {
         const str = String(value);
         const { minLength, maxLength, regex } = validations;
 
         if (minLength !== undefined && str.length < minLength) {
-          errors[name] = `${fieldLabel} must be at least ${minLength} characters`;
+          errors[
+            name
+          ] = `${fieldLabel} must be at least ${minLength} characters`;
         } else if (maxLength !== undefined && str.length > maxLength) {
-          errors[name] = `${fieldLabel} must be at most ${maxLength} characters`;
+          errors[
+            name
+          ] = `${fieldLabel} must be at most ${maxLength} characters`;
         }
 
         if (!errors[name] && regex) {
@@ -64,7 +57,7 @@ export function validateSubmissionAgainstSchema(schema, payload) {
         break;
       }
 
-      case 'number': {
+      case "number": {
         const num = Number(value);
         if (!Number.isFinite(num)) {
           errors[name] = `${fieldLabel} must be a valid number`;
@@ -81,14 +74,14 @@ export function validateSubmissionAgainstSchema(schema, payload) {
         break;
       }
 
-      case 'select': {
+      case "select": {
         if (options && !options.includes(value)) {
-          errors[name] = `${fieldLabel} must be one of: ${options.join(', ')}`;
+          errors[name] = `${fieldLabel} must be one of: ${options.join(", ")}`;
         }
         break;
       }
 
-      case 'multi-select': {
+      case "multi-select": {
         if (!Array.isArray(value)) {
           errors[name] = `${fieldLabel} must be an array`;
           break;
@@ -97,7 +90,9 @@ export function validateSubmissionAgainstSchema(schema, payload) {
         if (options) {
           const invalidOption = value.find((v) => !options.includes(v));
           if (invalidOption) {
-            errors[name] = `${fieldLabel} has invalid selection: ${invalidOption}`;
+            errors[
+              name
+            ] = `${fieldLabel} has invalid selection: ${invalidOption}`;
             break;
           }
         }
@@ -112,7 +107,7 @@ export function validateSubmissionAgainstSchema(schema, payload) {
         break;
       }
 
-      case 'date': {
+      case "date": {
         const date = new Date(value);
         if (isNaN(date.getTime())) {
           errors[name] = `${fieldLabel} must be a valid date`;
@@ -130,26 +125,23 @@ export function validateSubmissionAgainstSchema(schema, payload) {
         break;
       }
 
-      case 'switch': {
-        // Accept boolean or "true"/"false" etc.
+      case "switch": {
         const boolValue =
-          typeof value === 'boolean'
+          typeof value === "boolean"
             ? value
-            : value === 'true' || value === '1';
+            : value === "true" || value === "1";
 
-        // If required, ensure it exists (already checked) – usually no extra.
-        payload[name] = boolValue; // normalize
+        payload[name] = boolValue;
         break;
       }
 
       default:
-        // Unknown type -> ignore for now
         break;
     }
   }
 
   return {
     isValid: Object.keys(errors).length === 0,
-    errors
+    errors,
   };
 }

@@ -9,9 +9,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { Download, Eye, Pencil, SortAsc, Trash2 } from "lucide-react";
+import { ArrowDownAZ, ArrowUpAZ, Eye, Pencil, Trash2 } from "lucide-react";
 import useSubmissionFilters from "@/hooks/useSubmissionFilters";
-import { SortOrder } from "@/lib/types";
+import { SortOrder } from "@/types/types";
+import DownloadCSVButton from "@/custom-components/download-csv-button";
+import { TableFilterActionProps } from "@/types/data-table-type";
 
 export default function TableFilters() {
   const [filters, setFilters] = useSubmissionFilters();
@@ -34,14 +36,27 @@ export default function TableFilters() {
 
         <Select
           value={filters.sortOrder}
-          onValueChange={(v: SortOrder) => setFilters({ sortOrder: v })}
+          onValueChange={(v: SortOrder) =>
+            setFilters({ sortOrder: v, page: 1 })
+          }
         >
           <SelectTrigger className="w-32">
-            <SelectValue placeholder="Sort Order Created At" />
+            <SelectValue placeholder="Sort Order" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value={SortOrder.ASC}>Ascending</SelectItem>
-            <SelectItem value={SortOrder.DESC}>Descending</SelectItem>
+            <SelectItem value={SortOrder.ASC}>
+              <div className="flex items-center gap-2">
+                <ArrowUpAZ className="h-4 w-4" />
+                <span>Ascending</span>
+              </div>
+            </SelectItem>
+
+            <SelectItem value={SortOrder.DESC}>
+              <div className="flex items-center gap-2">
+                <ArrowDownAZ className="h-4 w-4" />
+                <span>Descending</span>
+              </div>
+            </SelectItem>
           </SelectContent>
         </Select>
 
@@ -77,21 +92,17 @@ export default function TableFilters() {
             <SelectItem value="50">50</SelectItem>
           </SelectContent>
         </Select>
-
-        <Button variant="outline" size="icon">
-          <Download className="h-4 w-4" />
-        </Button>
+        <DownloadCSVButton />
       </div>
     </div>
   );
 }
 
-TableFilters.Actions = function Actions({
-  submission,
+export function TableActions({
   onView,
   onEdit,
   onDelete,
-}: any) {
+}: TableFilterActionProps) {
   return (
     <div className="flex gap-2">
       <Button variant="outline" size="icon" onClick={onView}>
@@ -105,4 +116,4 @@ TableFilters.Actions = function Actions({
       </Button>
     </div>
   );
-};
+}

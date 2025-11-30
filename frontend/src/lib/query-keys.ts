@@ -1,4 +1,4 @@
-import { SortOrder } from "./types";
+import { SortOrder } from "../types/types";
 
 export const queryKeys = {
   formSchema: ["formSchema"] as const,
@@ -17,6 +17,6 @@ export const queryKeys = {
       params.sortBy,
       params.sortOrder,
       params.search ?? "",
-      params.department ?? ""
-    ] as const
+      params.department ?? "",
+    ] as const,
 };

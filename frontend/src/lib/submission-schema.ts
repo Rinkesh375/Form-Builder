@@ -1,4 +1,4 @@
-import { DepartmentEnum, type Submission } from "./types";
+import { DepartmentEnum, type Submission } from "../types/types";
 import { z } from "zod";
 
 export const submissionSchema = z.object({

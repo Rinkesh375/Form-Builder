@@ -5,13 +5,16 @@ import {
   updateSubmission,
   deleteSubmission,
   getSubmissionById,
+  getAllSubmissions,
 } from "../services/submissions.service.js";
 import { validateSubmissionAgainstSchema } from "../services/validation.service.js";
+import { convertToCSV } from "../utils/csv-util.js";
 
 export async function createSubmissionHandler(req, res, next) {
   try {
     const schema = await getFormSchema();
-    const payload = req.body || {};
+    const payload = req?.body || {};
+
 
     const { isValid, errors } = validateSubmissionAgainstSchema(
       schema,
@@ -50,6 +53,24 @@ export async function listSubmissionsHandler(req, res, next) {
     });
 
     return res.status(200).json(result);
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function downloadCSVHandler(req, res, next) {
+  try {
+    const submissions = await getAllSubmissions();
+
+    const csv = convertToCSV(submissions);
+
+    res.setHeader("Content-Type", "text/csv");
+    res.setHeader(
+      "Content-Disposition",
+      "attachment; filename=submissions.csv"
+    );
+
+    return res.status(200).send(csv);
   } catch (err) {
     next(err);
   }
